@@ -10,7 +10,7 @@ class UserInfo extends Component {
   render() {
     return (
       <div className="UserInfo">
-        <img class="avatar" src={this.props.user && this.props.user.image[0].contentUrl} />
+        <img className="avatar" alt="This is a User Avatar" src={this.props.user && this.props.user.image[0].contentUrl} />
         <h1>{this.props.user && this.props.user.name}</h1>
       </div>
     )

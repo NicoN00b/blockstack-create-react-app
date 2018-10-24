@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import book from './img/agenda.png';
 import './App.css';
 
 import UserInfo from './UserInfo';
@@ -58,7 +58,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Blockstack Create React App</h1>
+          <h1 className="App-title">Little Block Book</h1>
+          <image src={book} alt="Little Block Book Logo"></image>
         </header>
         <p style={{display: this.state.isSignedIn ? 'none' : 'block' }}>
           <button onClick={this.handleSignIn}>
