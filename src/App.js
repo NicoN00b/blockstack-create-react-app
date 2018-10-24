@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import book from './img/agenda.png';
 import './App.css';
 import NavBar from './components/NavBar';
+import Footer from './components/Footer';
 
 import UserInfo from './UserInfo';
 
@@ -81,6 +82,7 @@ class App extends Component {
             Sign-out
           </button>
         </p>
+        <Footer/>
       </div>
     )
   }
