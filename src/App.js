@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import book from './img/agenda.png';
 import './App.css';
+import NavBar from './components/NavBar';
 
 import UserInfo from './UserInfo';
 
@@ -57,6 +58,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <NavBar/>
         <header className="App-header">
           <h1 className="App-title">Little Block Book</h1>
           <image src={book} alt="Little Block Book Logo"></image>

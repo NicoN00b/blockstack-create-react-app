@@ -17,7 +17,8 @@
     "blockstack": "latest",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-scripts": "^2.0.5"
+    "react-scripts": "^2.0.5",
+    "reactstrap": "^6.5.0"
   },
   "browserslist": [
     ">0.2%",
