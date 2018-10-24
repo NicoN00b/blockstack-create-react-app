@@ -1,52 +1,68 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Button } from 'reactstrap';
+import { Navbar, NavbarBrand, NavbarToggler, Nav, NavItem, NavLink, Collapse } from 'reactstrap';
 import './styles.css';
 
 class NavBar extends Component {
+  constructor(props) {
+  super(props);
+
+  this.toggle = this.toggle.bind(this);
+	this.toggle2 = this.toggle2.bind(this);
+  this.state = {
+      isOpen: false
+    };
+  }
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+	toggle2() {
+		if (this.state.isOpen) {
+			this.setState({
+	      isOpen: false
+	    });
+		}
+  }
   render() {
     return (
-      <div className="NavBar">
-				<Container>
-					<Row>
-						<Col xs='3'>
-							<Button href={"https://postmates.com/merchant/zachs-shack-portland"} color="secondary">Order Here</Button>
-						</Col>
-						<Col xs='9' className="socialIcons">
-							<a href="https://www.yelp.com/biz/zachs-shack-portland"><span className="footer-icon icon fa fa-yelp desktop-only"></span></a>
-							<a href="https://www.facebook.com/ZachsShackHotdogs/"><span className="footer-icon icon fa fa-facebook-square desktop-only"></span></a>
-							<a href="https://www.instagram.com/explore/locations/227503863/zachs-shack/"><span className="footer-icon icon fa fa-instagram desktop-only"></span></a>
-						</Col>
-					</Row>
-					<Row>
-						<Col>
-							<Container>
-								<Row>
-									<Col>
-										<a href="/"><h1>LLB</h1></a>
-									</Col>
-								</Row>
-							</Container>
-						</Col>
-					</Row>
-					<Row>
-						<Col md="3"></Col>
-						<Col>
-							<a href="/menu">Menu</a>
-						</Col>
-						<Col>
-							<a href="/about">About</a>
-						</Col>
-						<Col>
-							<a href="/contact">Contact</a>
-						</Col>
-						<Col md="3"></Col>
-					</Row>
-				</Container>
-			</div>
+      <Navbar expand="md" className={this.props.className}>
+        <NavbarBrand href="/">
+          
+        </NavbarBrand>
+        <NavbarToggler onClick={this.toggle} />
+        <Collapse isOpen={this.state.isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+							<NavLink href={"/menu"} className="menuItem" onClick={this.toggle2}>Menu
+							</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink href={"/about"} className="menuItem" onClick={this.toggle2}>About</NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink href={"/contact"} className="menuItem" onClick={this.toggle2}>Contact</NavLink>
+						</NavItem>
+          </Nav>
+          <Nav className="socialIcons">
+						<NavItem>
+							<NavLink href="https://www.instagram.com/brickandmotorpdx/" target="_blank" rel="noopener noreferrer"><span className="footer-icon icon fa fa-instagram desktop-only"></span></NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink href="https://www.facebook.com/brickandmotorpdx/" target="_blank" rel="noopener noreferrer"><span className="footer-icon icon fa fa-facebook-square desktop-only"></span></NavLink>
+						</NavItem>
+						<NavItem>
+							<NavLink href="https://www.yelp.com/biz/brick-and-motor-portland-2?osq=Brick+and+Motor" target="_blank" rel="noreferrer noopener"><span className="footer-icon icon fa fa-yelp desktop-only"></span></NavLink>
+						</NavItem>
+          </Nav>
+        </Collapse>
+      </Navbar>
     );
   }
 }
+
 NavBar.defaultProps = {
-  className: "",
+  className: "sticky-top navbar-dark bg-dark my-nav-bar",
 }
+
 export default NavBar;

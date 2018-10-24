@@ -1,43 +1,48 @@
-.NavBar {
-	background-color: purple;
-	width: 100vw;
+.my-nav-bar {
+	height: 10vh;
+}
+
+.socialIcons{
+	justify-content: center;
 }
 
 
-.NavBar a {
-	color: black;
-	font-size: 2vw;
+/* Bootstrap overrides */
+.bg-dark {
+	background-color: black!important;
+	height: 100%;
 }
 
-.NavBar h1 {
-	color: black;
-	font-size: 4.5rem;
-	font-family: 'Luckiest Guy', cursive;
+.nav-link {
+	color: white!important;
+	border-bottom: 1px black solid;
 }
 
-.NavBar a:hover {
-    color: white;
-		text-decoration: none;
+.nav-link:hover {
+	border-bottom: 1px white solid;
 }
 
-.NavBar h1:hover {
-    color: white;
+.navbar-brand {
+  padding-top: 5px;
+  padding-right: 15px;
+  padding-left: 15px;
+  padding-bottom: 5px;
+  min-height: 40px;
+  min-width: 40px;
 }
-
-
-
-@media (max-width: 575px) {
-  .socialIcons {
-      visibility: hidden;
+#bamLogo {
+  max-width:10vh;
+  max-height:10vh;
+  width: auto;
+  height: auto;
+  margin-left: 5vw;
+}
+.menuItem{
+  font-size: 3vh;
+}
+/*
+@media (max-width: 991px) {
+  .desktop-only {
+      display:none !important;
   }
-
-	.NavBar a {
-		color: black;
-		font-size: 5vw;
-	}
-
-	.NavBar h1 {
-		color: black;
-		font-size: 10vw;
-	}
-}
+} */
