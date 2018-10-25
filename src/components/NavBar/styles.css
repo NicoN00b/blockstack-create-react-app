@@ -9,13 +9,13 @@
 
 /* Bootstrap overrides */
 .bg-dark {
-	background-color: black!important;
+	background-color: #8A2BE2!important;
 	height: 100%;
 }
 
 .nav-link {
 	color: white!important;
-	border-bottom: 1px black solid;
+	border-bottom: 1px #8A2BE2 solid;
 }
 
 .nav-link:hover {
