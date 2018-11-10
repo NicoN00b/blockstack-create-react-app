@@ -46,13 +46,13 @@ class NavBar extends Component {
           </Nav>
           <Nav className="socialIcons">
 						<NavItem>
-							<NavLink href="https://www.instagram.com/brickandmotorpdx/" target="_blank" rel="noopener noreferrer"><span className="footer-icon icon fa fa-instagram desktop-only"></span></NavLink>
+							<NavLink href="https://www.instagram.com/grailsofttechnologies/" target="_blank" rel="noopener noreferrer"><span className="footer-icon icon fa fa-instagram desktop-only"></span></NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink href="https://www.facebook.com/brickandmotorpdx/" target="_blank" rel="noopener noreferrer"><span className="footer-icon icon fa fa-facebook-square desktop-only"></span></NavLink>
+							<NavLink href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><span className="footer-icon icon fa fa-facebook-square desktop-only"></span></NavLink>
 						</NavItem>
 						<NavItem>
-							<NavLink href="https://www.yelp.com/biz/brick-and-motor-portland-2?osq=Brick+and+Motor" target="_blank" rel="noreferrer noopener"><span className="footer-icon icon fa fa-yelp desktop-only"></span></NavLink>
+							<NavLink href="https://www.yelp.com" target="_blank" rel="noreferrer noopener"><span className="footer-icon icon fa fa-yelp desktop-only"></span></NavLink>
 						</NavItem>
           </Nav>
         </Collapse>
