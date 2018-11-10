@@ -28,13 +28,13 @@ class NavBar extends Component {
     return (
       <Navbar expand="md" className={this.props.className}>
         <NavbarBrand href="/">
-          
+
         </NavbarBrand>
         <NavbarToggler onClick={this.toggle} />
         <Collapse isOpen={this.state.isOpen} navbar>
           <Nav className="ml-auto" navbar>
             <NavItem>
-							<NavLink href={"/menu"} className="menuItem" onClick={this.toggle2}>Menu
+							<NavLink href={"/menu"} className="menuItem" onClick={this.toggle2}>Sign Up
 							</NavLink>
 						</NavItem>
 						<NavItem>
